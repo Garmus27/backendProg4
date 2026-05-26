@@ -10,7 +10,7 @@
 
 ## VIDEO MUESTRA DEL PROYECTO
 
-https://drive.google.com/file/d/1uxlO1j2JeEqE1bFlQRzApqB-GT6qsOdE/view
+https://drive.google.com/file/d/1A2tVmffUVA-cOdwUw3JkTmy5PJNwF-Gp/view?usp=sharing
 
 ---
 
