@@ -18,7 +18,7 @@ def get_service(session: Annotated[Session, Depends(get_session)]) -> PedidoServ
     return PedidoService(session)
 
 
-# ── Catálogos públicos ─────────────────────────────────────────────────────────
+# catalogos - estados, formas de pago, etc
 
 @router.get("/estados", response_model=list[EstadoPedidoPublic])
 def list_estados(
@@ -36,7 +36,7 @@ def list_formas_pago(
     return svc.list_formas_pago()
 
 
-# ── Pedidos del usuario autenticado ───────────────────────────────────────────
+# pedidos del usuario logeado
 
 @router.post("/", response_model=PedidoConDetalle, status_code=status.HTTP_201_CREATED)
 def create_pedido(
@@ -98,7 +98,7 @@ def avanzar_estado(
     )
 
 
-# ── Administración ─────────────────────────────────────────────────────────────
+# admin - ve todos los pedidos
 
 @router.get("/admin/todos", response_model=PedidoList)
 def list_all_pedidos(

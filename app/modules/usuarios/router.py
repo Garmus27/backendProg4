@@ -89,7 +89,7 @@ def read_me(
     return current_user
 
 
-# ── Roles ──────────────────────────────────────────────────────────────────────
+# endpoints de roles
 
 @router.get("/roles", response_model=list[RolPublic])
 def list_roles(
@@ -120,7 +120,7 @@ def quitar_rol(
     return svc.quitar_rol(usuario_id, rol_codigo)
 
 
-# ── Administración de usuarios ─────────────────────────────────────────────────
+# administracion de usuarios - solo admin
 
 @router.get("/admin/usuarios", response_model=list[UsuarioPublic])
 def list_users(
